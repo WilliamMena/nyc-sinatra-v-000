@@ -1,10 +1,7 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <tr>
-    <td><%= @landmark.name %></td>
-    <td><%= @landmark.year_completed %></td>
-  </tr>
-<table>
+<h2>Name: <%= @figure.name %></h2>
+
+<% if @figure.landmarks %>
+  <% @figure.landmarks.each do |l| %>
+    <p>Landmarks: <%= l.name %></p>
+  <% end %>
+<% end %>

@@ -4,14 +4,14 @@
   Name: <input type="text" name="figure[name]" id="figure_name">
   <br></br>
 
-  Create or pick a title: <input type="text" name="title[name]">
+  Create or pick a title: <input type="text" name="title[name]" id="new_title">
   <br></br>
   <% @titles.each do |t| %>
     <input type="checkbox" name="figure[title_ids][]" value="<%= t.id %>" id="title_<%= t.id %>"><%= t.name %></input>
   <% end %>
   <br></br>
 
-  Create or pick a landmark as well: <input type="text" name="landmark[name]">
+  Create or pick a landmark as well: <input type="text" name="landmark[name]" id="new_landmark">
   <br></br>
   <% @landmarks.each do |l| %>
     <input type="checkbox" name="figure[landmark_ids][]" value="<%= l.id %>" id="landmark_<%= l.id %>"><%= l.name %></input>
